@@ -69,7 +69,7 @@ This project was made for evaluation for an internship at Roxiler Systems by **O
 2. Install dependencies with `npm install`
 3. Set up your `.env` file (see example in code)
 4. Start the backend server: `node server/index.js` or `nodemon server/index.js`
-5. Start the frontend (if applicable)
+5. Start the frontend by npm run dev
 
 ---
 
