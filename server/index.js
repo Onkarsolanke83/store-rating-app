@@ -12,7 +12,7 @@ import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 // Load environment variables
 dotenv.config();
 
-// Create Express app
+// Create Expressss
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -30,7 +30,7 @@ const pool = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
 });
 
-// Session and Passport middleware (for Google OAuth)
+// Session and Passport middleware (for Google OAuth
 app.use(session({
   secret: process.env.SESSION_SECRET || 'your_session_secret',
   resave: false,
@@ -237,19 +237,7 @@ async function analyzeSentiment(text) {
   return result[0]?.label || 'NEUTRAL';
 }
 
-// SQL to create the reviews table (run this in your database):
-//
-// CREATE TABLE reviews (
-//   id SERIAL PRIMARY KEY,
-//   store_id INTEGER NOT NULL,
-//   user_id INTEGER NOT NULL,
-//   rating INTEGER NOT NULL,
-//   review TEXT,
-//   sentiment VARCHAR(20),
-//   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-// );
-
-// Rating routes with sentiment analysis and DB storage
+// SQL to create the reviews tablee
 app.post('/api/ratings', authenticateToken, async (req, res) => {
   const { storeId, rating, review } = req.body;
   try {
