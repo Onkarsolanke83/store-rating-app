@@ -6,7 +6,7 @@ A full-stack web application for rating and reviewing stores. Users can register
 ---
 
 ## Tech Stack
-- **Frontend:** React.js (suggested, update if different)
+- **Frontend:** React.js , Html , Tailwand css
 - **Backend:** Node.js, Express.js
 - **Database:** PostgreSQL
 - **Authentication:** JWT, Google OAuth
