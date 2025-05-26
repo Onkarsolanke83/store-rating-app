@@ -268,14 +268,18 @@ app.post('/api/ratings', authenticateToken, async (req, res) => {
 // Admin creates a new user (e.g., store owner)
 app.post('/api/users', authenticateToken, requireAdmin, async (req, res) => {
   const { name, email, address, password, role } = req.body;
+  console.log('Received request to add user:', { name, email, address, role }); // <-- Add this line
+
   const allowedRoles = ['admin', 'user', 'store-owner'];
   if (!allowedRoles.includes(role)) {
+    console.log('Invalid role:', role); // <-- Add this line
     return res.status(400).json({ message: 'Invalid role' });
   }
   try {
     // Check if user exists
     const userCheck = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
     if (userCheck.rows.length > 0) {
+      console.log('Email already in use:', email); // <-- Add this line
       return res.status(400).json({ message: 'Email already in use' });
     }
 
@@ -287,9 +291,10 @@ app.post('/api/users', authenticateToken, requireAdmin, async (req, res) => {
     );
     const user = result.rows[0];
 
+    console.log('User added successfully:', user); // <-- Add this line
     res.status(201).json({ user });
   } catch (err) {
-    console.error(err);
+    console.error('Error adding user:', err); // <-- Add this line
     res.status(500).json({ message: 'Database error' });
   }
 });

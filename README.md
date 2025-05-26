@@ -29,10 +29,21 @@ A full-stack web application for rating and reviewing stores. Users can register
 
 ## Screenshots
 ### Web App
-<!-- Add screenshots of your web app UI here -->
+
+![Profile Page](assets/Profile%20Home%20page.png)
+
+![Admin Dashboard](assets/Admin%20Dashboard.png)
+
+![User Dashboard](assets/User%20dashbord.png)
+
+![Store owner Dashboard](assets/store%20owner.png)
+
+
+
 
 ### Database
-<!-- Add screenshots of your database schema or data here -->
+![Databse Output](assets/database%20output.png)
+
 
 ---
 
@@ -60,7 +71,7 @@ Netlify Link: [Add your Netlify deployment link here]
 ## About
 This project was made for evaluation for an internship at Roxiler Systems by **Onkar Solanke**.
 
-[LinkedIn Profile](https://www.linkedin.com/in/your-linkedin-profile)
+[LinkedIn Profile](https://www.linkedin.com/in/onkar-solanke-3369a7208/)
 
 ---
 
